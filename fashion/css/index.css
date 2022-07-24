@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+* {margin:0; padding:0; box-sizing:border-box;}
+html,body {font:10pt/180% "나눔고딕"; color:black;}
+html {scroll-behavior:smooth;}
+a {text-decoration:none; color:black;}
+img {display:block; max-width:100%;}
+	p {text-align:justify;}
+#layout {max-width:550px; margin:auto; position:relative;}
+
+
+/*상단*/
+header {background:#db4437; display:flex; padding:15px;}
+header button {background:transparent; border:none; color:white; }
+header button.material-icons {font-size:2.3rem;}
+header h1 {flex:1; text-align:center; color:white;}
+
+#layout > nav {background:white; height:80vh; box-shadow:0 3px 5px rgba(0,0,0,0.6); display:none; position:absolute; width:100%;}
+#layout > nav ul {list-style-position:inside; list-style:none;}
+#layout > nav ul li { padding:20px 30px; border-bottom:1px solid #ddd;}
+#layout > nav ul li a { display:flex;}
+#layout >nav img {width:20px; height:20px; margin-right:10px;}
+
+main {padding:10px; margin-top:20px;}
+main h2 {margin-bottom:10px;}
+main p img {float:left; width:12%;}
+
+figure { padding:5px; margin-bottom:20px;}
+figure img {border-radius:15px; box-shadow:1px 3px 5px rgba(0,0,0,0.8);}
+figure figcaption {text-align:center; padding:8px;}
+
+section {padding:10px;}
+section h2 {padding-bottom:10px;}
+section nav ol {color:#db4437; list-style-position:inside; margin-bottom:20px;}
+
+
+aside {background:rgba(219,68,55, 0.3); padding:20px;}
+aside h3 {font-size:1.3rem;}
+aside h3::before {content:"\2618"; color:#db4437; margin-right:5px;}
+aside p:not(:last-child) {padding-bottom:10px;}
+
+
+footer {background:#ddd; padding:15px;}
+
+#topbutton {position:fixed; bottom:10px; right:calc(((100% - 550px) / 2) + 10px); background:white; box-shadow:0 0 5px rgba(0,0,0,0.6); border-radius:5px; font-weight:bold;}
+
+
+@media(max-width:550px){
+	#topbutton {right:10px;}
+}
