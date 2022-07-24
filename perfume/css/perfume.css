@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+* {margin:0; padding:0; box-sizing:border-box;}
+html {scroll-behavior:smooth;}
+html,body {font:12pt / 180% "나눔고딕";}
+a {display:block; text-decoration:none; color:black;}
+img {max-width:100%; display:block;}
+
+#layout {max-width:600px; margin:auto; position:relative;}
+
+/*상단*/
+header {background:#c721d6; color:white; padding:15px; display:flex; align-items:center;}
+header button {padding:3px 6px; background:none; border:none; color:white; font-size:1.5rem;}
+h1 {flex:1; text-align:center; }
+header ruby {transform:translateX(-15px); display:block; width:100px; margin:auto;}
+
+/*메뉴 (네비게이션)*/
+nav {background:white; position:absolute; width:100%; height:80vh; padding:20px 20px; box-shadow:0 5px 5px rgba(0,0,0,0.8); display:none; z-index:1;}
+nav a {padding:10px; border-bottom:1px solid #aaa; font-weight:bold; color:#444; transition:0.5s;}
+nav a:hover {padding-left:30px; color:#c721d6;/*transform:translateX(10px);*/}
+
+
+/*메인*/
+main {padding:10px;}
+main h2 {padding:20px 0 10px;}
+main p  {text-align:justify; padding-bottom:20px;}
+main p::first-letter {font-weight:bold; font-size:1.5rem; color:white; background:#c721d6; padding:5px;}
+main p img {float:left; width:50px; margin-right:20px; transition:0.5s;} /*작은 향수병*/
+main p img:hover {transform:rotate(360deg); }
+
+main figure {	overflow:hidden; width:95%; margin:auto;}
+main figure div {display:flex; width:calc(570 * 5 - 20); position:relative;}
+main figure div img {width:100%; height:400px;}
+main figcaption {text-align:center; font-size:0.9rem; color:#666; padding:10px 0 20px;}
+
+section {background:#f0c8eb; padding:20px 10px;}
+section h3 {padding-top:10px;}
+section h3::before {content:"\2619"; color:#c721d6;/*주조색*/padding-right:10px;}
+section p::first-letter {font-style:italic; text-shadow:0 0 2px red; font-size:1.5rem; color:#c721d6;}
+/* section p:first-of-type {color:red;} */
+
+/*하단정보*/
+footer {background:#ddd; padding:10px; color:#555; text-align:center;}
+/* footer::first-line {color:red;} */
+
+/*위로(top)화살표*/
+#arrTop {position:fixed; bottom:10px; right:10px; background:white; padding:3px 6px; box-shadow:0 0 5px black; border-radius:5px; font-weight:bold; font-size:1.5rem;}
