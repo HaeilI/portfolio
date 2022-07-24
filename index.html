@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>박민수의 포트폴리오</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Jua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+<link rel="stylesheet" href="css/portfolio.css">
+<link rel="stylesheet" href="css/bubble.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/portfolio.js"></script>
+<script src="js/jquery.1.11.1.js"></script>
+<script>
+$(document).ready(function(){
+	$(".hover-bg>a:not(.noBlack)").click(function(){
+		var x1 = $(this).find("img").attr("src");
+		var x2 = x1.replace("small","large");
+		var y = $(this).find("h4").text();
+		//alert(x + y);		
+		
+		$("#black").fadeIn();
+		$("#black>h1").text(y);
+		$("#black img").attr({"src": x2, "alt":y , "max-width" : "1000px"});
+		
+		$("body").removeClass().css("overflow","hidden");
+		$("body>div").last().remove();
+	});
+	$("#black>button").click(function(){
+		$("#black").fadeOut();
+		$("body").css("overflow","auto");
+	});
+	$(document).keydown(function(e){
+		if(e.keyCode==27){
+			$("#black").fadeOut();	
+			$("body").css("overflow","auto");
+		}	
+	});
+});
+</script>
+
+<style>
+::-webkit-scrollbar { width: 0px; } 
+#black {position:fixed; width:100%; height:100vh; background:rgba(0,0,0,0.8); top:0; left:0; z-index:2;overflow:auto; padding-top:10px; text-align:center; display:none;}
+#black>h1 {color:white; font-size:1.5rem;}
+#black>button {background:transparent; border:none;}
+#black img {display:block; margin:auto; max-width:95%;}
+@media (max-width:500px){
+	.categories ol.type {display:block; width:90vw;}
+	.categories ol.type li { margin:15px 10px; }
+}
+</style>
+
+</head>
+<body>
+<!-- Header -->
+	<nav>
+		<div>
+			<p>Park Min Soo</p>
+			<div>
+				<a href="#top" class="active" id="nav1">Home</a>
+				<a href="#about" id="nav2">About</a>
+				<a href="#portfolio1" id="nav3">Portfolio</a>
+				<a href="#portfolio" id="nav4">Event</a>
+				<a href="#contact" id="nav5">Contact</a>
+			</div>
+		</div>
+	</nav>
+	<header id="top">
+		<div id="typing"></div>
+		<div id="scroll">
+			<i class="fas fa-chevron-down"></i>
+			<a href="#about">Scroll</a>
+		</div>
+	</header>
+	<section id="about" class="area">
+		<h2>About</h2>
+		<img src="images/me.png" alt="홍길동">
+		<p>
+			<q>맡은 일을 꿋꿋히 수행하는 사람</q>
+		</p>
+		<div>
+			<section>
+				<h3>Profile</h3>
+				<p>
+					이름 : 박민수 (Park Min Soo)<br>
+					나이 : 27세 (1996.05.08)<br>
+					주소 :  경기도 용인시 수지구 성복동<br>
+					연락처 : 010-3099-4708<br>
+					E-mail :aoqa1@naver.com
+				</p>
+			</section>
+			<section>
+				<h3>Experiences & Education</h3>
+				<p>
+					2022.04.07 - 2022.08.23 : 이젠컴퓨터아트학원 스마트 웹콘텐츠 UI/UX 디자인 & 퍼블리셔과정 수료<br>
+					2015.03. - 2018.02. : 동서울대학교 실내디자인과 졸업<br>
+					2012.03. - 2015.02. : 성복고등학교 졸업
+				</p>
+			</section>
+			<section>
+				<h3>Skill</h3>
+				<p>Photoshop</p>
+				<div class="graph">
+					<span>70%</span>
+				</div>
+				<p>Illustrator</p>
+				<div class="graph">
+					<span>70%</span>
+				</div>
+				<p>HTML5</p>
+				<div class="graph">
+					<span>80%</span>
+				</div>
+				<p>CSS3</p>
+				<div class="graph">
+					<span>70%</span>
+				</div>
+				<p>jQurey</p>
+				<div class="graph">
+					<span>60%</span>
+				</div>
+				<p>sketchup</p>
+				<div class="graph">
+					<span>70%</span>
+				</div>
+			</section>
+		</div>
+	</section>
+	<div id="portfolio1" class="area">
+		<h2>Portfolio</h2>
+		<section id="seoulphoto">
+			<div>
+				<h3>서울사진학원</h3>
+				<ul>
+					<li>
+						<b>사이트명</b>
+						<span>서울사진학원</span>
+					</li>						
+					<li>
+						<b>제작기간</b>
+						<span>2022.06.10 - 2022.06.15</span>
+					</li>
+					<li>
+						<b>제작물</b>
+						<span>메인페이지</span>
+					</li>
+					<li>
+						<b>컨셉</b>
+						<span>깔끔함</span>
+					</li>
+					<li>
+						<b>컨셉설명</b>
+						<span>학원 홈페이지인 만큼 기존의 홈페이지보다 사진에 더 비중을 두었고 서울사진학원에 대한 홍보와 학원등록을 알아보는 수강생들에게 중요한 개강 일정, 국비지원 등의 내용을 한 페이지에서 볼 수 있도록 컨텐츠를 구성하였습니다.</span><br>						
+					</li>					
+				</ul>
+				<a href="seoulphoto/index.html" target="_blank">웹사이트 바로가기</a>
+			</div>
+			<div>
+				<img src="images/portfolio-1.png" alt="포트폴리오 서울사진학원">
+			</div>			
+		</section>
+		<section id="shortpre">
+			<div>
+				<img src="images/portfolio-2.png" alt="포트폴리오 Short Pre">
+			</div>
+			<div>
+				<h3>Short Pre</h3>
+				<ul>
+					<li>
+						<b>사이트명</b>
+						<span>Short Pre</span>
+					</li>
+					<li>
+						<b>제작기간</b>
+						<span>2022.06.20 - 2022.06.30</span>
+					</li>
+					<li>
+						<b>제작물</b>
+						<span>앱사이트</span>
+					</li>
+					<li>
+						<b>컨셉</b>
+						<span>모던함, 즐거움</span>
+					</li>
+					<li>
+						<b>사이트설명</b>
+						<span>요즘 유행하는 짧은 영상들 중 드라마와 영화의 예고편이나 재밌는 장면들을 모아둔앱. 영상들을 보다 그 드라마나 영화를 찾아 볼 수 있게 도와준다.</span>
+					</li>
+				</ul>
+				<a href="plan/shortpre/index.html" target="_blank">스토리보드</a>
+				<a href="https://haeili.github.io/ShortPre/" onclick="window.open(this.href, 'win1', 'top=50, left=200 , width=414, height=736, toolbar=yes, scrollbars=no, resizable=yes'); return false;"   onkeypress="this.onclick()">앱사이트 바로가기</a>
+			</div>
+		</section>
+		<section id="interior">
+			<div>
+				<h3>Interior Design</h3>
+				<ul>
+					<li>
+						<b>사이트명</b>
+						<span>Interior Design (반응형)</span>
+					</li>
+					<li>
+						<b>제작기간</b>
+						<span>2022.06.30 - 2022.07.16</span>
+					</li>
+					<li>
+						<b>제작물</b>
+						<span>메인페이지와 서브페이지</span>
+					</li>
+					<li>
+						<b>컨셉</b>
+						<span>모던한, 컬러풀</span>
+					</li>
+					<li>
+						<b>컨셉설명</b>
+						<span>인테리어 디자인을 컬러별로 구경 할 수 있는 페이지를 만들어 보고 싶었습니다. 컬러를 고르면 구역별로 구경을 할 수 있습니다. 원하는 디자인의 사진을 누르면 사진의 자세한 정보와 디자인한 업체로 연결이 가능합니다.</span>
+					</li>
+				</ul>
+				<a href="plan/interior/index.html" target="_blank">웹디자인 기획서</a>
+				<a href="interior/index.html" target="_blank">웹사이트 바로가기</a>
+				<a href="interior/index.html" onclick="alert('모바일에서만 정상적으로 작동합니다.'); window.open(this.href, 'win1', 'top=50, left=200 , width=414, height=736, toolbar=yes, scrollbars=no, resizable=yes');  return false;"   onkeypress="this.onclick()">모바일앱 바로가기</a>
+			</div>
+			<div>
+				<img src="images/portfolio-3.png" alt="Interior Design">
+			</div>
+		</section>
+	</div>
+<!-- Portfolio Section -->
+<div id="portfolio" class="area">
+  <div class="container">
+    <div class="section-title">
+      <h2>Event and Detail</h2>
+    </div>
+    <div class="categories">
+      <ul class="cat">
+        <li>
+          <ol class="type">
+            <li><a href="#" data-filter="*" class="active">모두보기</a></li>
+            <li><a href="#" data-filter=".eventDesign">이벤트/배너디자인</a></li>
+            <li><a href="#" data-filter=".pptDesign">기획서PPT</a></li>
+            <li><a href="#" data-filter=".webDesign">웹/앱디자인</a></li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="portfolio-items">
+	  <div class="col-sm-6 col-md-4 webDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="perfume/index.html" target="_blank" title="향수정보 모바일 앱"  onclick="window.open('perfume/index.html','win1','width=602,height=667,left=300,top=50');return false;" onkeypress="this.onclick()" class="noBlack">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>향수정보 모바일 앱</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/28-small.jpg" class="img-responsive" alt="Air Jordan 모바일 앱 프로토타입"></a></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 eventDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"><a href="img/portfolio/01-large.jpg" title="CU+삼성증권 이벤트">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>CU+삼성증권 이벤트</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="CU+삼성증권 이벤트"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 eventDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="레모나-s 포스팅 이벤트">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>레모나-s 포스팅 이벤트</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="레모나-s 포스팅 이벤트"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 eventDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="플레이디비봄이벤트">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>플레이디비봄이벤트</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="플레이디비봄이벤트"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 pptDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/04-large.jpg"  title="'타짜' 사이트 제안서">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>'타짜' 사이트 제안서</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="'타짜' 사이트 제안서"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 eventDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="추석이벤트">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>추석이벤트</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="추석이벤트"> </a> </div>
+          </div>
+        </div>
+				<div class="col-sm-6 col-md-4 eventDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/30-large.jpg" title="다시쓰는 소중한 물">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>다시쓰는 소중한 물</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/30-small.jpg" class="img-responsive" alt="다시쓰는 소중한 물"> </a> </div>
+          </div>
+        </div>
+				<div class="col-sm-6 col-md-4 eventDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/32-large.jpg" title="인터파크 쇼핑할인">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>인터파크 쇼핑할인</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/32-small.jpg" class="img-responsive" alt="인터파크 쇼핑할인"> </a> </div>
+          </div>
+        </div>
+				<div class="col-sm-6 col-md-4 eventDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/31-large.jpg" title="우주라이크서울">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>우주라이크서울</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/31-small.jpg" class="img-responsive" alt="우주라이크서울"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 webDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="http://aoqa1.cafe24.com/web/chania/" target="_blank" title="하니아" onclick="window.open('http://aoqa1.cafe24.com/web/chania/','win1','width=414,height=736');return false;" onkeypress="this.onclick()" class="noBlack">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>하니아</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="하니아"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 pptDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/24-large.jpg"  title="인테리어 디자인 제안서">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>Interior Design</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/24-small.jpg" class="img-responsive" alt="인테리어 디자인 제안서"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 pptDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/23-large.jpg" title="모바일 'Short Pre앱' 제안서">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>모바일 'Short Pre앱' 제안서</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/23-small.jpg" class="img-responsive" alt="모바일 'Short Pre앱' 제안서"> </a> </div>
+          </div>
+        </div>
+        <!-- <div class="col-sm-6 col-md-4 webDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/25-large.jpg" title="용담 베리숲마을 사이트 첫화면 시안">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>용담 베리숲마을 사이트 첫화면 시안</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/25-small.jpg" class="img-responsive" alt="용담 베리숲마을 사이트 첫화면 시안"></a></div>
+          </div>
+        </div> -->
+        <div class="col-sm-6 col-md-4 webDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="swatch/index.html" target="_blank" title="Swatch 웹사이트" class="noBlack">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>Swatch 웹사이트</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/20-small.jpg" class="img-responsive" alt="Swatch 웹사이트"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 webDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="hanwoori/index.html" target="_blank" title="hanwoori 웹사이트" class="noBlack">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>한우리 웹사이트 시안</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="한우리 웹사이트 시안"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 webDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"><a href="fashion/index.html" target="_blank" title="패션정보 모바일 앱" onclick="window.open('fashion/index.html','win1','width=414,height=736');return false;" onkeypress="this.onclick()" class="noBlack"> 
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>패션정보 모바일 앱</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="패션정보 모바일 앱"> </a> </div>
+          </div>
+        </div>
+		<div class="col-sm-6 col-md-4 webDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="morning/index.html" target="_blank" title="아침고요펜션" class="noBlack">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>아침고요펜션</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/26-small.jpg" class="img-responsive" alt="아침고요펜션"></a></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 webDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="seoulphoto/index.html" target="_blank" title="서울사진학원" onclick="window.open('seoulphoto/index.html');return false;" onkeypress="this.onclick()" class="noBlack">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>서울사진학원</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/27-small.jpg" class="img-responsive" alt="서울사진학원"></a></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 eventDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/14-large.jpg" title="빵빵한 충전타임 이벤트">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>빵빵한 충전타임 이벤트</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/14-small.jpg" class="img-responsive" alt="빵빵한 충전타임 이벤트"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 eventDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/15-large.jpg" title="위메프 룰렛 이벤트">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>위메프 룰렛 이벤트</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/15-small.jpg" class="img-responsive" alt="위메프 룰렛 이벤트"> </a> </div>
+          </div>
+        </div>
+        <!-- <div class="col-sm-6 col-md-4 webDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/21-large.jpg" title="사조참지 몰 사이트 시안">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>사조참지 몰 사이트 시안</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/21-small.jpg" class="img-responsive" alt="사조참지 몰 사이트 시안"> </a> </div>
+          </div>
+        </div>		 -->
+		<div class="col-sm-6 col-md-4 eventDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/18-large.jpg" title="학생할인이벤트">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>학생할인이벤트</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/18-small.jpg" class="img-responsive" alt="학생할인이벤트"> </a> </div>
+          </div>
+        </div>
+				<div class="col-sm-6 col-md-4 webDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="interior/index.html" target="_blank" title="Interior Design" onclick="window.open('interior/index.html');return false;" onkeypress="this.onclick()" class="noBlack">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>인테리어사이트 첫화면 시안</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/17-small.jpg" class="img-responsive" alt="인테리어사이트 첫화면 시안"></a></div>
+          </div>
+        </div>
+        <!-- <div class="col-sm-6 col-md-4 pptDesign">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/16-large.jpg" title="오셜록 UI 설계서">
+              <div class="hover-text">
+                <div class="overlay-caption">
+                  <div class="overlay-content">
+                    <h4>오셜록 UI 설계서</h4>
+                  </div>
+                </div>
+              </div>
+              <img src="img/portfolio/16-small.jpg" class="img-responsive" alt="오셜록 UI 설계서"> </a> </div>
+          </div>
+        </div> -->        
+        <!--############### end ##############-->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Section -->
+<section id="black">
+	<h1>PETIKET앱 다운로드 이벤트</h1>
+	<button type="button"><img src="#" alt="PETIKET앱 다운로드 이벤트"></button>
+</section>
+
+<section id="contact" >
+		<h2>
+			Contact us
+			<b>소중한 연락을 기다립니다!</b>
+		</h2>		
+		<div>
+			<section>
+				<i class="fas fa-envelope"></i>
+				<h3>E-mail</h3>
+				<p>aoqa1@naver.com</p>
+			</section>
+			<section>
+				<a class="fas fa-phone-alt" href="tel:010.3099.4708"></a>
+				<h3>Phone</h3>
+				<a href="tel:010.3099.4708">010.3099.4708</a>
+			</section>
+		</div>
+	</section>
+	<div id="background-wrap">
+    <div class="bubble x1"></div>
+    <div class="bubble x2"></div>
+    <div class="bubble x3"></div>
+    <div class="bubble x4"></div>
+    <div class="bubble x5"></div>
+    <div class="bubble x6"></div>
+    <div class="bubble x7"></div>
+    <div class="bubble x8"></div>
+    <div class="bubble x9"></div>
+    <div class="bubble x10"></div>
+</div>
+
+
+<script src="js/nivo-lightbox.js"></script> 
+<script src="js/jquery.isotope.js"></script>  
+<script src="js/main.js"></script>
+</body>
+</html>
