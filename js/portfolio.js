@@ -90,10 +90,10 @@
 			if( 1931 <= st && st < 4987 ){
 				$("#nav3").addClass("active").siblings().removeClass("active");
 			}
-			if( 4987 <= st && st < 11323){
+			if( 4987 <= st && st < 11000){
 				$("#nav4").addClass("active").siblings().removeClass("active");
 			}
-			if( 11323 <= st){
+			if( 11000 <= st){
 				$("#nav5").addClass("active").siblings().removeClass("active");
 			}
 			console.log(st);
