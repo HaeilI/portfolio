@@ -63,10 +63,10 @@
 		if( 1800 <= st && st < 4581 ){
 			$("#nav3").addClass("active").siblings().removeClass("active");
 		}
-		if( 4581 <= st && st < 6664 ){
+		if( 4581 <= st && st < 6300 ){
 			$("#nav4").addClass("active").siblings().removeClass("active");
 		}
-		if( 6664 <= st){
+		if( 6300 <= st){
 			$("#nav5").addClass("active").siblings().removeClass("active");
 		}
 		console.log(st);
